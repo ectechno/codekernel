@@ -19,12 +19,11 @@
           <a id="forkme_banner" href="https://github.com/ectechno/codekernel">View on GitHub</a>
 
           <h1 id="project_title">Codekernel</h1>
-          <h2 id="project_tagline">Product development middleware</h2>
+          <h2 id="project_tagline">A middleware for software product development</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/ectechno/codekernel/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/ectechno/codekernel/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+			  </section>
         </header>
     </div>
 
@@ -32,36 +31,62 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="for-whom" class="anchor" href="#for-whom"><span class="octicon octicon-link"></span></a>For Whom?</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Architectural needs of software product are inherently different to the needs of a bespoke application. For example uncertanities of <code>operational context</code>, <code>competition</code>, <code>target user base</code>, etc. demand much higher degree of architectural flexibility from Software products. If you are an ISV, looking for a futuristic, standard driven, modern product architecture that can rapidly improve your time-to-market, you are at the right place now.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Simply put, Codekernel is a middleware code for complex software product development using the modern Microsoft technology stack.</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="what-does-it-provide" class="anchor" href="#what-does-it-provide"><span class="octicon octicon-link"></span></a>What do you get with it?</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>
+<img src="images/architecture-overview.png" />
+<span class="picture_desc">* Commonly used modules are colored in gray</span>
+</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>With Codekernel we've crafted a platform providing necessary plumbing code for most of the common architectural needs of a software product. Go ahead, just download and run the solution to see the sample application in action. You can easily start building the features you need by following our <a href="#">documentation and tutorials</a>.
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+Following are some of the features you will get off-the-shelf with Codekernel.
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h5>Data Layer</h5>
+<ul><li>Generic base classes for unit of work', 'repository' patterns using Entity Framework</li>
+<li>Standard practices for 'Seed data handling' and 'migrations'</li></ul>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<h5>Logic Layer</h5>
+<ul><li>Cleanly separated behaviour code (fast changing) from domain model (slow changing)</li>
+<li>Clean request/response driven business logic service classes to obay SRP</li>
+<li>Workflow foundation based business process engine for business rule configurability [TBD]</li>
+<li>Best practices for software product edition management and licensing [TBD]</li>
+</ul>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h5>Service Layer</h5>
+<ul><li>Generic Web API controller classes for exposing your entities as OData services</li>
+<li>Support for comprehensive OData query options including $filter, $select, $expand etc.</li>
+<li>Concurrency conflict handling on your OData services</li></ul>
+
+<h5>Presentation Layer</h5>
+<ul>
+<li>Powerful library integration for a default 'Single Page Application (SPA)' frontend</li>
+<li>Ability to introduce different presentations (e.g. ASP.NET MVC, Native mobile, etc.)</li>
+</ul>
+
+<h5>Security</h5>
+<ul><li>Comprehensive auth model with support for basic, forms and OAuth schemes [TBD]</li>
+<li>Strong protection against common vulnarabilities such as CSRF, injection attacks etc [TBD]</li></ul>
+
+<h5>Cloud Support</h5>
+<ul><li>Off-the-shelf Microsoft Azure platform compatibility [TBD]</li>
+<li>Abstractions to support both in-cloud and out-cloud deployment [TBD]</li>
+<li>Multitenancy support for deliverign software as a service [TBD]</li></ul>
+
+<h5>Testing</h5>
+<ul><li>Over 90% test coverage for complete the serverside code base</li>
+<li>Generic integration tests to verify CRUD operations on your repositories</li>
+<li>Generic self hosted integration tests to very your Web API OData services </li>
+<li>Test framework to test your clientside Javascript logic [TBD]</li></ul>
+
       </section>
     </div>
 

@@ -1,3 +1,10 @@
+.picture_desc {
+  right: 0;
+  color: #999;
+  margin: 10px 0 0;
+}
+
+
 /*******************************************************************************
 Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
@@ -319,7 +326,7 @@ Full-Width Styles
 
 #downloads {
   position: absolute;
-  width: 210px;
+  width: 110px;
   z-index: 10;
   bottom: -40px;
   right: 0;
